@@ -1,27 +1,13 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Navbar_ from "../components/Navbar_";
 import Main from "../components/Main";
 import data from "../components/data";
 import {useState} from "react";
 import Basket from "../components/Basket";
-import Product from "../components/Product";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-
-
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#908787',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    borderRadius: '20px',
-    width: '500px',
-    margin:'auto', // center
-}));
 
 
  function Shop() {
