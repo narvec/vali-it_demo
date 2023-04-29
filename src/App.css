@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+
+}
+.App-header {
+  background-color: rgb(200, 227, 117);
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #281717;
+  padding-top: 66px;
+}
+
+.coolBeans {
+  border: 1px solid currentColor;
+  border-radius: 3rem;
+  /*color: yellow;*/
+  font-size: 4rem;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+
+.coolBeans::after {
+  background-color: rgb(200, 227, 117);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(30deg);
+  transform-origin: top right;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.coolBeans:hover::after {
+  transform: translate(0, 0);
+}
+
+.coolBeans:hover {
+  border: 2px solid transparent;
+  color: indigo;
+  transform: scale(1.05);
+  will-change: transform;
+}
+.coolBeans span {
+  color: white !important;
+}
+
+.coolBeans:hover span {
+  color: #201326 !important;
+}
+
