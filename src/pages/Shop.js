@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Navbar_ from "../components/Navbar_";
 import Main from "../components/Main";
 import data from "../components/data";
 import {useState} from "react";
 import Basket from "../components/Basket";
+import Product from "../components/Product";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -62,11 +65,21 @@ const Item = styled(Paper)(({ theme }) => ({
                 paddingTop: '30px',
                 minHeight: '50hv'}}>
                     <Main onAdd={onAdd} products={products}></Main>
+                <Grid container justifyContent="center" style={{ marginTop: '30px' }}>
+                    <Grid item xs={12} sm={8} md={6}>
+                        <Paper elevation={3} style={{
+                            padding: '20px',
+                            borderRadius: '20px',
+                            textAlign: 'center'
+                        }}>
+                            <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
+                        </Paper>
+                    </Grid>
+                </Grid>
 
-
-                    <Item style={{marginTop: '30px',}} elevation={3}> {/* Wrap Basket component with Paper */}
-                        <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
-                    </Item>
+                    {/*<Item style={{marginTop: '30px',}} elevation={3}> /!* Wrap Basket component with Paper *!/*/}
+                    {/*    <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>*/}
+                    {/*</Item>*/}
 
             </main>
 

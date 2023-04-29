@@ -16,23 +16,23 @@ function Footer() {
                 backgroundColor: 'rgb(16,14,14)',
             }}>
             <Grid container spacing={2} sx={{marginTop: '0', justifyContent: "space-between"  }}>
-                <Grid item xs={6} md={4}>
-                    <Box sx={{ width: 300, justifyContent: "center", paddingLeft: "50px", paddingBottom: "10px"}}>
-                        <Typography  sx={{ fontSize: 16, textAlign: "left", textTransform: 'uppercase', color: "white"}}>
+                <Grid item xs={12} sm={6} md={4}>
+                    <Box sx={{ width: { xs: '100%', sm: 300 }, justifyContent: "center", mx: 'auto', paddingBottom: "10px"}}>
+                        <Typography  sx={{ fontSize: 16, textAlign: { xs: "center", sm: "left" }, textTransform: 'uppercase', color: "white"}}>
                            <span style={{ fontFamily: 'bold' }} >About:</span>
                         </Typography>
-                        <Typography sx={{ fontSize: 14, textAlign: "left", color: "white" }}>
+                        <Typography sx={{ fontSize: 14, textAlign: { xs: "center", sm: "left" }, color: "white" }}>
                             © Author: Mihhail Knajžetski 2023
                         </Typography>
-                        <Typography sx={{ fontSize: 14, textAlign: "left", color: "white"}}>
+                        <Typography sx={{ fontSize: 14, textAlign: { xs: "center", sm: "left" }, color: "white"}}>
                         Contact me at:  <a href="mailto:mihhail.knjazetski@gmail.com" style={{ color: 'white' }}> mihhail.knjazetski@gmail.com</a>
                         </Typography>
                     </Box>
                 </Grid>
 
-                <Grid item xs={6} md={4} sx={{marginTop: '0', justifyContent: "right" }} >
-                    <Box sx={{ width: 300, paddingLeft: "50px", paddingRight: "10px" }}>
-                        <Typography className="social-icons" sx={{ fontSize: 13, color: "white", textAlign: { xs: "left", md: "center" }}}>
+                <Grid item xs={12} sm={6} md={4} sx={{marginTop: '0', justifyContent: "right" }} >
+                    <Box sx={{ width: { xs: '100%', sm: 300 }, mx: 'auto'}}>
+                        <Typography className="social-icons" sx={{ fontSize: 13, color: "white", textAlign: { xs: "center", sm: "left" , md: "center"}}}>
                             <Link href="https://www.instagram.com/narvec/" target="_blank">
                                 <IconButton>
                                     <FaInstagram style={{ fontSize: "150%", color: "pink" }} />
