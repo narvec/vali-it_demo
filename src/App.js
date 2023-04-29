@@ -70,7 +70,7 @@ function App() {
 
               }}>
             <Typography variant="h5" gutterBottom sx={{ fontFamily: 'monospace' }}>
-              Welcome to my GitHub page!
+              Welcome to my page!
             </Typography>
             <Typography variant="body1" gutterBottom>
               My name is Mihhail, and I recently completed the VALI-IT course for "Front-end Developer and Product Owner & Business Analyst".
